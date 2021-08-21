@@ -12,7 +12,7 @@ const HomeCarousel = () => {
 
     return (
         <div className="w-full h-auto">
-            <Carousel slides={slides} autoplay={true} interval={4000} arrows={false} arrowBorders={false} />
+            <Carousel slides={slides} autoplay={false} arrows={true} arrowBorders={true} />
         </div>
 )
 }

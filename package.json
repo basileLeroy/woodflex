@@ -1,5 +1,11 @@
 {
   "dependencies": {
     "3d-react-carousal": "^4.0.2"
+  },
+  "scripts": {
+    "start": "cd client && craco start",
+    "build": "cd client && craco build",
+    "test": "cd client && craco test",
+    "eject": "cd client && react-scripts eject"
   }
 }

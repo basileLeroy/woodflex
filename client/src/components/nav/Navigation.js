@@ -2,18 +2,21 @@ import React from 'react';
 import { NavLink, Link } from "react-router-dom";
 
 const Navigation = () => {
+
+    const toggleMenu = () => {
+        document.getElementById('nav-content').classList.toggle('hidden');
+    }
+
     return (
         <nav className="flex items-center justify-between flex-wrap bg-primary-one p-6 fixed w-full z-10 top-0">
             <div className="flex items-center flex-shrink-0 text-white mr-6">
-                <NavLink tag={Link} exact to="/">
+                <NavLink className="text-white no-underline hover:text-white hover:no-underline" tag={Link} exact to="/">
                     <span className="text-3xl pl-2"><i className="em em-grinning">Woodflex</i></span>
                 </NavLink>
-                <a className="text-white no-underline hover:text-white hover:no-underline" href="#">
-                </a>
             </div>
 
             <div className="block lg:hidden">
-                <button id="nav-toggle"
+                <button id="nav-toggle" onClick={toggleMenu}
                         className="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
                     <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <title>Menu</title>
@@ -28,10 +31,10 @@ const Navigation = () => {
                     <li>
                         <div className="group inline-block">
                             <button
-                                className="outline-none focus:outline-none px-3 py-1 text-white rounded-sm flex items-center min-w-32"
+                                className="outline-none focus:outline-none px-3 py-1 text-white rounded-sm flex items-center w-full lg:min-w-32"
                             >
-                                <span className="pr-1 pb-4 font-semibold flex-1">About us</span>
-                                <span className="pb-4">
+                                <span className="pr-1 pb-2 font-semibold flex-1">About us</span>
+                                <span className="pb-2">
                                     <svg
                                         className="fill-current h-4 w-4 transform group-hover:-rotate-180
                                     transition duration-150 ease-in-out"
@@ -69,10 +72,10 @@ const Navigation = () => {
                     <li>
                         <div className="group inline-block">
                             <button
-                                className="outline-none focus:outline-none px-3 py-1 text-white rounded-sm flex items-center min-w-32"
+                                className="outline-none focus:outline-none px-3 py-1 text-white rounded-sm flex items-center w-full lg:min-w-32"
                             >
-                                <span className="pr-1 pb-4 font-semibold flex-1">Services</span>
-                                <span className="pb-4">
+                                <span className="pr-1 pb-2 font-semibold flex-1">Services</span>
+                                <span className="pb-2">
                                     <svg
                                         className="fill-current h-4 w-4 transform group-hover:-rotate-180
                                     transition duration-150 ease-in-out"
@@ -107,7 +110,7 @@ transition duration-150 ease-in-out origin-top min-w-32"
                     <li>
                         <div className="group inline-block">
                             <NavLink tag={Link} className="outline-none focus:outline-none px-3 py-1 text-white rounded-sm flex items-center" exact activeClassName=" border-b-4 border-fuchsia-600" to="/projects">
-                                <span className="pr-1 pb-4 font-semibold flex-1">Projects</span>
+                                <span className="pr-1 pb-2 font-semibold flex-1">Projects</span>
                             </NavLink>
 
                         </div>
@@ -115,26 +118,27 @@ transition duration-150 ease-in-out origin-top min-w-32"
                     <li>
                         <div className="group inline-block">
                             <NavLink tag={Link} className="outline-none focus:outline-none px-3 py-1 text-white rounded-sm flex items-center" exact activeClassName=" border-b-4 border-fuchsia-600" to="/blog">
-                                <span className="pr-1 pb-4 font-semibold flex-1">Blog</span>
+                                <span className="pr-1 pb-2 font-semibold flex-1">Blog</span>
                             </NavLink>
                         </div>
                     </li>
                     <li>
                         <div className="group inline-block">
                             <NavLink tag={Link} className="outline-none focus:outline-none px-3 py-1 text-white rounded-sm flex items-center" exact activeClassName=" border-b-4 border-fuchsia-600" to="/faq">
-                                <span className="pr-1 pb-4 font-semibold flex-1">F.A.Q.</span>
+                                <span className="pr-1 pb-2 font-semibold flex-1">F.A.Q.</span>
                             </NavLink>
                         </div>
                     </li>
-                    <li className="ml-24">
+                    <li className="lg:ml-24">
                         <div className="group inline-block">
-                            <NavLink tag={Link} className="outline-none focus:outline-none px-3 py-1 text-white rounded-sm flex items-center min-w-32" exact activeClassName=" border-b-4 border-fuchsia-600" to="/contact">
-                                <span className="pr-1 pb-4 font-semibold flex-1">Contact</span>
+                            <NavLink tag={Link} className="outline-none focus:outline-none px-3 py-1 text-white rounded-sm flex items-center w-full lg:min-w-32" exact activeClassName=" border-b-4 border-fuchsia-600" to="/contact">
+                                <span className="pr-1 pb-2 font-semibold flex-1">Contact</span>
                             </NavLink>
                         </div>
                     </li>
                 </ul>
             </div>
+
         </nav>
 
     );
