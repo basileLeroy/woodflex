@@ -4,7 +4,8 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { Error } from './pages/error';
 import { Home } from './pages/home';
 import { Navigation, Footer} from "./components/nav";
-import {Approach, Circular, Modular, Sustainability, Timber} from "./pages/about-us";
+import { Approach, Circular, Modular, Sustainability, Timber } from "./pages/about-us";
+import { Contact } from "./pages/contact";
 
 const App = () => {
     return (
@@ -29,6 +30,9 @@ const App = () => {
 
                     {/*Projects*/}
                     <Route path="/projects" exact component={ Error } />
+
+                    {/*Projects*/}
+                    <Route path="/contact" exact component={ Contact } />
 
                     {/*404 page & redirect*/}
                     <Route path="/404" component={ Error } />
