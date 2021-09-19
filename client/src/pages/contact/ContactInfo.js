@@ -1,6 +1,5 @@
 import React from 'react';
 import { GrMapLocation, GrPhone, GrMailOption } from "react-icons/gr";
-import {Link} from "react-router-dom";
 
 const ContactInfo = () => {
 
