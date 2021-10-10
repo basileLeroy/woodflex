@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { HomeCarousel } from "../../components/slideshow";
 
 const Home = () => {
@@ -21,10 +22,10 @@ const Home = () => {
                     <h1 className="text-3xl font-bold text-center lg:pt-12">What is...</h1>
                 </div>
                 <div className="w-full my-10 lg:my-16 lg:pb-10 flex flex-col lg:flex-row justify-around">
-                    <button className=" transition duration-300 ease-in-out font-bold bg-button-modulariteit hover:bg-white py-2 px-4 mx-0 lg:mx-0 my-4 lg:my-0 rounded w-2/3 lg:w-52 text-white hover:text-button-modulariteit hover:border hover:border-button-modulariteit text-xl">modulair</button>
-                    <button className=" transition duration-300 ease-in-out font-bold bg-button-circulariteit hover:bg-white py-2 px-4 mx-8 lg:mx-0 my-4 lg:my-0 rounded w-2/3 lg:w-52 text-white hover:text-button-circulariteit hover:border hover:border-button-circulariteit text-xl">circulair</button>
-                    <button className=" transition duration-300 ease-in-out font-bold bg-button-duurzaamheid hover:bg-white py-2 px-4 mx-16 lg:mx-0 my-4 lg:my-0 rounded w-2/3 lg:w-52 text-white hover:text-button-duurzaamheid hover:border hover:border-button-duurzaamheid text-xl">duurzaamheid</button>
-                    <button className=" transition duration-300 ease-in-out font-bold bg-button-houtskelet hover:bg-white py-2 px-4 mx-24 lg:mx-0 my-4 lg:my-0 rounded w-2/3 lg:w-52 text-white hover:text-button-houtskelet hover:border hover:border-button-houtskelet text-xl">houtskelet</button>
+                    <Link to="/about-us/modular" className="transition text-center duration-300 ease-in-out font-bold bg-button-modulariteit hover:bg-white py-2 px-4 mx-0 lg:mx-0 my-4 lg:my-0 rounded w-2/3 lg:w-52 text-white hover:text-button-modulariteit hover:border hover:border-button-modulariteit text-xl">modulair</Link>
+                    <Link to="/about-us/circular" className="transition text-center duration-300 ease-in-out font-bold bg-button-circulariteit hover:bg-white py-2 px-4 mx-8 lg:mx-0 my-4 lg:my-0 rounded w-2/3 lg:w-52 text-white hover:text-button-circulariteit hover:border hover:border-button-circulariteit text-xl">circulair</Link>
+                    <Link to="/about-us/sustainability" className="transition text-center duration-300 ease-in-out font-bold bg-button-duurzaamheid hover:bg-white py-2 px-4 mx-16 lg:mx-0 my-4 lg:my-0 rounded w-2/3 lg:w-52 text-white hover:text-button-duurzaamheid hover:border hover:border-button-duurzaamheid text-xl">duurzaamheid</Link>
+                    <Link to="/about-us/timber-structure" className="transition text-center duration-300 ease-in-out font-bold bg-button-houtskelet hover:bg-white py-2 px-4 mx-24 lg:mx-0 my-4 lg:my-0 rounded w-2/3 lg:w-52 text-white hover:text-button-houtskelet hover:border hover:border-button-houtskelet text-xl">houtskelet</Link>
                 </div>
 
             </div>

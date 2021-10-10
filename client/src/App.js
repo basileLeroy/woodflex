@@ -16,8 +16,8 @@ const App = () => {
                     <Route path="/" exact component={ Home } />
 
                     {/*About us*/}
-                    <Route path="/about-us/circular" exact component={ Circular } />
                     <Route path="/about-us/modular" exact component={ Modular } />
+                    <Route path="/about-us/circular" exact component={ Circular } />
                     <Route path="/about-us/our-approach" exact component={ Approach } />
                     <Route path="/about-us/sustainability" exact component={ Sustainability } />
                     <Route path="/about-us/timber-structure" exact component={ Timber } />
