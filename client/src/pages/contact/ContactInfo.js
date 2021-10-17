@@ -1,5 +1,5 @@
 import React from 'react';
-import { GrMapLocation, GrPhone, GrMailOption } from "react-icons/gr";
+import { GrPhone, GrMailOption } from "react-icons/gr";
 
 const ContactInfo = () => {
 
@@ -7,9 +7,10 @@ const ContactInfo = () => {
         <>
             <div className="flex-container">
                 <div className="component flex lg:flex-row flex-col">
-                    <div className="general-info p-4 w-full lg:w-1/3 h-auto bg-brown-sand">
-                        <h1>CONTACT</h1>
-                        <div className="contact-card flex flex-col">
+                    <div className="general-info p-4 w-full lg:w-1/3">
+
+                        <div className="contact-card flex flex-col bg-brown-sand p-4">
+                            <h1>CONTACT</h1>
                             <div className="contact-item w-full flex flex-wrap justify-between">
                                 <GrPhone size={60} style={{margin:0, display: 'inline-block'}} />
                                 <p>tel: (+32) 456 78 90</p>
@@ -18,12 +19,12 @@ const ContactInfo = () => {
                                 <GrMailOption size={60} style={{margin:0, display: 'inline-block'}} />
                                 <p>email: <a href='mailto:info@woodflex.com'>info@woodflex.com</a></p>
                             </div>
-                            <div className="contact-item w-full flex flex-wrap justify-between">
-                                <GrMapLocation size={60} style={{margin:0, display: 'inline-block'}} />
+                            <br/>
+                            <div className="contact-item w-full flex flex-wrap justify-center">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.940291882634!2d3.7212237156393058!3d51.05419027956328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c37146f023fafb%3A0x155761ea40a108bf!2sKlein%20Turkije%202a%2C%209000%20Gent!5e0!3m2!1sen!2sbe!4v1632043562937!5m2!1sen!2sbe"
-                                    width="300"
-                                    height="200"
+                                    width="100%"
+                                    height="auto"
                                     title="Location"
                                     style={{ border: 0 }}
                                     allowFullScreen=""
