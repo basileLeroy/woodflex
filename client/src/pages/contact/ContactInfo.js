@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { GrPhone, GrMailOption } from "react-icons/gr";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ContactInfo = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
 
     return (
         <>
-            <div className="flex-container">
+            <div data-aos={"fade-left"} data-aos-duration={"800"} className="flex-container">
                 <div className="component flex lg:flex-row flex-col">
                     <div className="general-info p-4 w-full lg:w-1/3">
 

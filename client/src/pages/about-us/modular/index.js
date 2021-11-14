@@ -1,12 +1,19 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import banner from "../../../assets/images/Modular_building_NOTSAFE.jpg";
 import modular from "../../../assets/images/modular-construction.jpg";
 import {TitleAnimation} from "../../../components/animations/TitleAnimation";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Modular = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
+
     const animatedTitle = "Header Right Here!!";
     return (
-        <div className="flex-container w-full flex flex-col">
+        <div data-aos={"fade"} data-aos-duration={"500"} className="flex-container w-full flex flex-col">
             <div className="banner-Img w-full">
                 <img src={banner} alt="" className="object-cover h-48 w-full"/>
             </div>

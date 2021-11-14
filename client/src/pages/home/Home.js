@@ -1,10 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { HomeCarousel } from "../../components/slideshow";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
+
     return (
-        <div className="m-auto py-4">
+        <div data-aos={"fade"} data-aos-duration={"500"} className="m-auto py-4">
             <HomeCarousel />
             <div className="bg-brown-sand w-full mt-16 px-3 lg:flex content-center">
                 <div className="text-brown-dark w-full py-4 lg:py-0 lg:w-1/3 my-auto">
